@@ -8,7 +8,7 @@ const NewMovies = ({ titulo, imagen }) => {
   const [peliculas, setPeliculas] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=a956e692d7f996ce28c6cca9dfa978ce`
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=a956e692d7f996ce28c6cca9dfa978ce`
     )
       .then((res) => res.json())
       .then((data) => {

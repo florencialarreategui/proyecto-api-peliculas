@@ -1,12 +1,15 @@
-import Carrousel from "./Carrousel";
 import HomeSection from "./HomeSection";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
+import SimpleSlider from "./SimpleSlider";
 
 const Home = () => {
   return (
     <Box>
-      <Carrousel></Carrousel>
+      <Box>
+        <SimpleSlider></SimpleSlider>
+      </Box>
+
       <Box
         sx={{
           display: "flex",
@@ -14,11 +17,7 @@ const Home = () => {
           justifyContent: "space-between",
         }}
       >
-        <HomeSection
-         titulo="Peliculas populares" 
-         url="popular">
-           
-         </HomeSection>
+        <HomeSection titulo="Peliculas populares" url="popular"></HomeSection>
         <HomeSection
           titulo="Peliculas mejor putuadas"
           url="top_rated"
