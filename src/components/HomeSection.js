@@ -35,7 +35,7 @@ const HomeSection = ({ titulo, url }) => {
         <ItemPelicula
           key={pelicula.id}
           titulo={pelicula.title}
-          imagen={pelicula.logo_path}
+          imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
         ></ItemPelicula>
       ))}
     </Box>

@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import InfoSlider from "./InfoSlider";
-
 import { useEffect, useState } from "react";
 
 const SimpleSlider = () => {
@@ -34,7 +33,9 @@ const SimpleSlider = () => {
               info={pelicula.overview}
             ></InfoSlider>
             <Box>
-              <img src={pelicula.poster_path} />
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+              />
             </Box>
           </Box>
         ))}
