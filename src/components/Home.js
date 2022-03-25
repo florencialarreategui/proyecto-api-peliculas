@@ -5,7 +5,7 @@ import SimpleSlider from "./SimpleSlider";
 
 const Home = () => {
   return (
-    <Box>
+    <Box sx={{ bgcolor: "#eeeeee" }}>
       <Box>
         <SimpleSlider></SimpleSlider>
       </Box>

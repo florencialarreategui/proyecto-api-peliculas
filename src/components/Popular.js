@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Tarjetas from "./Tarjetas";
 import Container from "@mui/material/Container";
+import NavBar from "./NavBar";
 const Popular = () => {
   const [peliculas, setPeliculas] = useState([]);
   useEffect(() => {
