@@ -32,7 +32,7 @@ const Search = () => {
     console.log("valor del input");
   };
 
-  const handleClick = () => {
+  const handleInput = () => {
     setSearchParams({
       query: valorDelInput,
     });
@@ -55,11 +55,11 @@ const Search = () => {
         variant="outlined"
         onChange={handleChange}
         value={valorDelInput}
-
+        onInput={handleInput}
         sx={{ mt: 10, width: 600 }}
       />
 
-      <Button size="small" color="primary" onClick={handleClick}>
+      <Button size="small" color="primary" >
         Buscar
       </Button>
       <Box>
