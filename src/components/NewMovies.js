@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Tarjetas from "./Tarjetas";
 import Container from "@mui/material/Container";
+import NavBar from "./NavBar";
 
 const NewMovies = ({ titulo, imagen }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -16,7 +17,7 @@ const NewMovies = ({ titulo, imagen }) => {
       });
   }, []);
   return (
-    <Container>
+    <Container sx={{ bgcolor: "#eeeeee" }}>
       <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
         <Typography variant="h3" gutterBottom component="div">
           Últimos lanzamientos

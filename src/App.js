@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <>
-        <NavBar />
+        <NavBar></NavBar>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/popular" element={<Popular />} />
