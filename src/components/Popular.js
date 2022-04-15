@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Tarjetas from "./Tarjetas";
 import Container from "@mui/material/Container";
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 const Popular = () => {
   const [peliculas, setPeliculas] = useState([]);
   useEffect(() => {
@@ -24,11 +25,12 @@ const Popular = () => {
       </Box>
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {peliculas.map((pelicula) => (
-          <Tarjetas
-            key={pelicula.id}
-            titulo={pelicula.title}
-            imagen={pelicula.poster_path}
-          ></Tarjetas>
+          <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
+            <Tarjetas
+              titulo={pelicula.title}
+              imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+            ></Tarjetas>
+          </Link>
         ))}
       </Box>
     </Container>

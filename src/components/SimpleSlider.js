@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import InfoSlider from "./InfoSlider";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SimpleSlider = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -32,6 +33,9 @@ const SimpleSlider = () => {
               titulo={pelicula.title}
               info={pelicula.overview}
             ></InfoSlider>
+            <Link to={`/movie/${pelicula.id}`}>
+              <p>Ver más..</p>
+            </Link>
             <Box>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}

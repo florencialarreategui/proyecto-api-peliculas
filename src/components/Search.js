@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Container from "@mui/material/Container";
 import Tarjetas from "./Tarjetas";
+import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 
 const Search = () => {
@@ -62,12 +63,12 @@ const Search = () => {
 
       <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
         {peliculas.map((pelicula) => (
-          <Tarjetas
-            key={pelicula.id}
-            titulo={pelicula.title}
-            imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
-
-          ></Tarjetas>
+          <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
+            <Tarjetas
+              titulo={pelicula.title}
+              imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+            ></Tarjetas>
+          </Link>
         ))}
 
       </Box>
