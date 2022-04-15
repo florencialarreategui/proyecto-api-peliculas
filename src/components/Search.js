@@ -59,10 +59,8 @@ const Search = () => {
         sx={{ mt: 10, width: 600 }}
       />
 
-      <Button size="small" color="primary" >
-        Buscar
-      </Button>
-      <Box>
+
+      <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
         {peliculas.map((pelicula) => (
           <Tarjetas
             key={pelicula.id}
