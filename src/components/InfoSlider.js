@@ -17,6 +17,9 @@ const InfoSlider = ({ titulo, info }) => {
       <Typography variant="body1" gutterBottom>
         {info}
       </Typography>
+      <Typography variant="body1" gutterBottom>
+        Ver mas...
+      </Typography>
     </Box>
   );
 };
