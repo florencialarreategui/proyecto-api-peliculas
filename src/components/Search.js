@@ -14,13 +14,17 @@ const Search = () => {
   });
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=a956e692d7f996ce28c6cca9dfa978ce&query=${searchParams.get("query")}`
-    )
-      .then(res => res.json())
-      .then(data => {
-        setPeliculas(data.results);
-      });
+    if (searchParams.get("query")) {
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=a956e692d7f996ce28c6cca9dfa978ce&query=${searchParams.get(
+          "query"
+        )}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setPeliculas(data.results);
+        });
+    }
   }, [searchParams]);
 
   const handleChange = (e) => {
@@ -44,6 +48,7 @@ const Search = () => {
       }}
       fixed
     >
+
       <TextField
         id="outlined-basic"
         label="Buscar"
@@ -53,10 +58,21 @@ const Search = () => {
 
         sx={{ mt: 10, width: 600 }}
       />
+
       <Button size="small" color="primary" onClick={handleClick}>
         Buscar
       </Button>
+      <Box>
+        {peliculas.map((pelicula) => (
+          <Tarjetas
+            key={pelicula.id}
+            titulo={pelicula.title}
+            imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
 
+          ></Tarjetas>
+        ))}
+
+      </Box>
     </Container>
   );
 };
