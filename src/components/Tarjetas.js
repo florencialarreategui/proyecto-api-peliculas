@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
+
 const Tarjetas = ({ titulo, imagen }) => {
   return (
     <Card sx={{ width: 250, m: 2, p: 1.5 }}>

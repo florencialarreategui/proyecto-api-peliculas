@@ -1,13 +1,19 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-const InfoSlider = ({ titulo, info }) => {
+const InfoSlider = ({ titulo, info, link }) => {
   return (
     <Box
       sx={{
-        width: 200,
-        height: 150,
+        width: 600,
+        height: 250,
         backgroundColor: "secondary.main",
         position: "absolute",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        textAlign: "center",
+        p: 1,
+        opacity: 0.8,
         zIndex: "modal",
       }}
     >
@@ -18,7 +24,7 @@ const InfoSlider = ({ titulo, info }) => {
         {info}
       </Typography>
       <Typography variant="body1" gutterBottom>
-        Ver mas...
+        {link}
       </Typography>
     </Box>
   );
