@@ -28,7 +28,7 @@ const SimpleSlider = () => {
         adaptiveHeight={true}
       >
         {peliculas.map((pelicula) => (
-          <Box key={pelicula.id}>
+          <Box key={pelicula.id} >
             <InfoSlider
               titulo={pelicula.title}
               info={pelicula.overview}

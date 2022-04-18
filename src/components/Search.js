@@ -42,12 +42,11 @@ const Search = () => {
   return (
     <Container
       sx={{
-        height: "100vh",
+        height: "auto",
         display: "flex",
         justifyContent: "center",
         bgcolor: "#eeeeee",
       }}
-      fixed
     >
 
       <TextField
@@ -61,7 +60,7 @@ const Search = () => {
       />
 
 
-      <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", m: 2, flexWrap: 'wrap' }}>
         {peliculas.map((pelicula) => (
           <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
             <Tarjetas
