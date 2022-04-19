@@ -1,6 +1,8 @@
 import Box from "@mui/material/Box";
 import ItemPelicula from "./ItemPelicula";
+import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
+import Dialog from '@mui/material/Dialog';
 
 const HomeSection = ({ titulo, url }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -15,29 +17,41 @@ const HomeSection = ({ titulo, url }) => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        width: 500,
-        height: 500,
-        backgroundColor: "primary.dark",
-        overflow: "scroll",
-      }}
-    >
+    <Box>
       <Box
         sx={{
           width: 500,
           height: 70,
-          backgroundColor: "secondary.main",
+          backgroundColor: "warning.dark",
+          boxShadow: 6,
+          border: 0.5,
+          borderColor: "warning.dark"
         }}
-      ></Box>
+      >
+        <Typography variant="h5" color="#fafafa">
+          {titulo}
+        </Typography>
+      </Box>
 
-      {peliculas.map((pelicula) => (
-        <ItemPelicula
-          key={pelicula.id}
-          titulo={pelicula.title}
-          imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
-        ></ItemPelicula>
-      ))}
+
+      <Box scroll="paper"
+        sx={{
+          width: 500,
+          height: 500,
+          backgroundColor: "warning.light",
+          overflow: "scroll"
+        }}
+      >
+
+
+        {peliculas.map((pelicula) => (
+          <ItemPelicula
+            key={pelicula.id}
+            titulo={pelicula.title}
+            imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
+          ></ItemPelicula>
+        ))}
+      </Box>
     </Box>
   );
 };

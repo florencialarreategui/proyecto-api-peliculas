@@ -6,14 +6,14 @@ const InfoSlider = ({ titulo, info, link }) => {
       sx={{
         width: 600,
         height: 250,
-        backgroundColor: "secondary.main",
+        backgroundColor: "warning.light",
         position: "absolute",
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
         textAlign: "center",
         p: 1,
-        opacity: 0.8,
+        opacity: 0.6,
         zIndex: "modal",
       }}
     >

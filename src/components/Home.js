@@ -17,9 +17,9 @@ const Home = () => {
           justifyContent: "space-between",
         }}
       >
-        <HomeSection titulo="Peliculas populares" url="popular"></HomeSection>
+        <HomeSection titulo="PELÍCULAS POPULARES" url="popular"></HomeSection>
         <HomeSection
-          titulo="Peliculas mejor putuadas"
+          titulo="PELÍCULAS MEJOR PUNTUADAS"
           url="top_rated"
         ></HomeSection>
       </Box>

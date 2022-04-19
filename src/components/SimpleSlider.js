@@ -32,12 +32,13 @@ const SimpleSlider = () => {
             <InfoSlider
               titulo={pelicula.title}
               info={pelicula.overview}
+              link={<Link to={`/movie/${pelicula.id}`}>
+                <p>Ver más..</p>
+              </Link>}
             ></InfoSlider>
-            <Link to={`/movie/${pelicula.id}`}>
-              <p>Ver más..</p>
-            </Link>
+
             <Box>
-              <img
+              <img clasName="MuiImageListItem-img"
                 src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
               />
             </Box>

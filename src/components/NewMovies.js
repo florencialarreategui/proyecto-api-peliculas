@@ -18,7 +18,7 @@ const NewMovies = ({ titulo, imagen }) => {
       });
   }, []);
   return (
-    <Container sx={{ bgcolor: "#eeeeee" }}>
+    <Container sx={{ bgcolor: "#eeeeee", height: "auto", width: "auto" }}>
       <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
         <Typography variant="h3" gutterBottom component="div">
           Últimos lanzamientos
