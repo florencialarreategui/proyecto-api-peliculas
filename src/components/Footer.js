@@ -4,7 +4,7 @@ const Footer = () => {
     <>
       <Box sx={{
         height: 100,
-        backgroundColor: "primary.dark",
+        backgroundColor: "warning.dark",
       }}
       >
 
