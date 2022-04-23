@@ -2,11 +2,9 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import Container from "@mui/material/Container";
 import Tarjetas from "./Tarjetas";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link } from '@mui/material/Link';
-import Button from '@mui/material/Button';
 
 const Search = () => {
   const [valorDelInput, setValorDelInput] = useState("");
@@ -41,12 +39,13 @@ const Search = () => {
     console.log("presionaste la tecla");
   };
   return (
-    <Container
+    <Box
       sx={{
         height: "auto",
         display: "flex",
-        justifyContent: "center",
-        bgcolor: "#eeeeee",
+        flexDirection: "column",
+        alignItems: "center",
+        minWidth: 600
       }}
     >
 
@@ -57,7 +56,7 @@ const Search = () => {
         onChange={handleChange}
         value={valorDelInput}
         onInput={handleInput}
-        sx={{ mt: 10, width: 600 }}
+        sx={{ mt: 10, width: 400 }}
       />
 
 
@@ -67,14 +66,14 @@ const Search = () => {
           <LinkRouter key={pelicula.id} to={`/movie/${pelicula.id}`}>
             <Tarjetas
               titulo={pelicula.title}
-              imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+              imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
             ></Tarjetas>
           </LinkRouter>
 
         ))}
 
       </Box>
-    </Container>
+    </Box>
   );
 };
 export default Search;

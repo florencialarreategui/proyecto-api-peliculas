@@ -1,11 +1,10 @@
 import HomeSection from "./HomeSection";
 import Box from "@mui/material/Box";
-import { useEffect, useState } from "react";
 import SimpleSlider from "./SimpleSlider";
 
 const Home = () => {
   return (
-    <Box sx={{ bgcolor: "#eeeeee" }}>
+    <Box >
       <Box>
         <SimpleSlider></SimpleSlider>
       </Box>
@@ -15,6 +14,7 @@ const Home = () => {
           display: "flex",
           m: 10,
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
         <HomeSection titulo="PELÍCULAS POPULARES" url="popular"></HomeSection>

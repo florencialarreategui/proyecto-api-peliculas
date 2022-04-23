@@ -19,7 +19,7 @@ const SimpleSlider = () => {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor: "primary.dark" }}>
+    <Box sx={{ backgroundColor: "#eeeeee", objectFit: "contain" }}>
       <Slider
         dots={true}
         arrows={true}
@@ -28,7 +28,7 @@ const SimpleSlider = () => {
         adaptiveHeight={true}
       >
         {peliculas.map((pelicula) => (
-          <Box key={pelicula.id} >
+          <Box key={pelicula.id} sx={{}} >
             <InfoSlider
               titulo={pelicula.title}
               info={pelicula.overview}
@@ -37,7 +37,7 @@ const SimpleSlider = () => {
               </Link>}
             ></InfoSlider>
 
-            <Box>
+            <Box >
               <img clasName="MuiImageListItem-img"
                 src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
               />

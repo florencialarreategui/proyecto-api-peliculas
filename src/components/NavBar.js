@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router-dom";
 import { MdOutlineMovieFilter } from "react-icons/md";
@@ -10,7 +9,9 @@ const NavBar = () => {
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: "#ef6c00" }}>
       <Toolbar>
-        <MdOutlineMovieFilter color="#fafafa" variant="h6" sx={{ p: 2 }}></MdOutlineMovieFilter>
+        <Box sx={{ p: 2, fontSize: 50 }}>
+          <MdOutlineMovieFilter color="#fafafa" ></MdOutlineMovieFilter>
+        </Box>
         <Link to="/" underline="none">
           <CardActionArea>
             <Typography variant="h6" color="#fafafa" component="div" sx={{ p: 2, }}>

@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import ItemPelicula from "./ItemPelicula";
 import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
-import Dialog from '@mui/material/Dialog';
+import { Link } from "react-router-dom";
 
 const HomeSection = ({ titulo, url }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -25,7 +25,11 @@ const HomeSection = ({ titulo, url }) => {
           backgroundColor: "warning.dark",
           boxShadow: 6,
           border: 0.5,
-          borderColor: "warning.dark"
+          borderColor: "warning.dark",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "centerS",
+          mt: 4
         }}
       >
         <Typography variant="h5" color="#fafafa">
@@ -45,11 +49,13 @@ const HomeSection = ({ titulo, url }) => {
 
 
         {peliculas.map((pelicula) => (
-          <ItemPelicula
-            key={pelicula.id}
-            titulo={pelicula.title}
-            imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
-          ></ItemPelicula>
+          <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
+            <ItemPelicula
+              key={pelicula.id}
+              titulo={pelicula.title}
+              imagen={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
+            ></ItemPelicula>
+          </Link>
         ))}
       </Box>
     </Box>

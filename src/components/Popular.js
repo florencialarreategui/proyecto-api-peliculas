@@ -2,8 +2,6 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Tarjetas from "./Tarjetas";
-import Container from "@mui/material/Container";
-import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 const Popular = () => {
   const [peliculas, setPeliculas] = useState([]);
@@ -17,7 +15,7 @@ const Popular = () => {
       });
   }, []);
   return (
-    <Container>
+    <Box>
       <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
         <Typography variant="h3" gutterBottom component="div">
           Más populares
@@ -28,12 +26,12 @@ const Popular = () => {
           <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
             <Tarjetas
               titulo={pelicula.title}
-              imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+              imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
             ></Tarjetas>
           </Link>
         ))}
       </Box>
-    </Container>
+    </Box>
   );
 };
 export default Popular;

@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Typography from "@mui/material/Typography";
 const DetallePelicula = () => {
 
   const params = useParams();
@@ -16,12 +16,30 @@ const DetallePelicula = () => {
   }, [params.idPelicula]);
   return (
 
-    <Container>
-      <Box>
-        <h2>{pelicula.title}</h2>
-        <img src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`} alt={pelicula.title} />
+    <Box sx={{
+      display: "flex",
+      p: 6
+
+    }}>
+      <Box sx={{ mr: 5 }}>
+        <img src={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`} alt={pelicula.title} />
       </Box>
-    </Container>
+      <Box>
+
+        <Typography variant="h2">{pelicula.title}</Typography>
+
+        <Typography>  {pelicula.release_date === ""
+          ? "Sin resultados"
+          : pelicula.release_date}</Typography>
+        <Typography> {pelicula.overview === ""
+          ? "Sin resultados"
+          : pelicula.overview}</Typography>
+
+
+
+
+      </Box>
+    </Box>
 
   )
 
