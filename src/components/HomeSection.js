@@ -28,7 +28,7 @@ const HomeSection = ({ titulo, url }) => {
           borderColor: "warning.dark",
           display: "flex",
           alignItems: "center",
-          justifyContent: "centerS",
+          justifyContent: "center",
           mt: 4
         }}
       >

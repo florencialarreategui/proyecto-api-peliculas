@@ -19,7 +19,7 @@ const SimpleSlider = () => {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor: "#eeeeee", objectFit: "contain" }}>
+    <Box sx={{ backgroundColor: "#eeeeee", }}>
       <Slider
         dots={true}
         arrows={true}

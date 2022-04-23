@@ -2,7 +2,8 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Tarjetas from "./Tarjetas";
-import { Link } from "react-router-dom";
+import { Link as LinkRouter } from "react-router-dom";
+import { Link } from '@mui/material/Link';
 const Popular = () => {
   const [peliculas, setPeliculas] = useState([]);
   useEffect(() => {
@@ -23,12 +24,12 @@ const Popular = () => {
       </Box>
       <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {peliculas.map((pelicula) => (
-          <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
+          <LinkRouter key={pelicula.id} to={`/movie/${pelicula.id}`}>
             <Tarjetas
               titulo={pelicula.title}
               imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
             ></Tarjetas>
-          </Link>
+          </LinkRouter>
         ))}
       </Box>
     </Box>
