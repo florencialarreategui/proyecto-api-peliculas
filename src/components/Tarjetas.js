@@ -1,27 +1,36 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { CardActionArea, } from "@mui/material";
+import { AiFillEye } from "react-icons/ai";
 
 
 const Tarjetas = ({ titulo, imagen }) => {
   return (
-    <Card sx={{ width: 250, m: 2, p: 1.5 }}>
+    <Box sx={{ width: 300, border: 1, mb: 1, borderColor: "#eeeeee", display: "flex", justifyContent: "center" }}>
       <CardActionArea>
-        <CardMedia component="img" image={imagen} height="140" alt={titulo} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {titulo}
-          </Typography>
-        </CardContent>
+        <Box >
+          <img src={imagen} alt={titulo} />
+        </Box>
+
+        <Typography gutterBottom variant="h6" component="div" color="#424242" sx={{ m: 4 }}>
+          {titulo}
+        </Typography>
+        <Box
+          sx={{
+            height: 45,
+            borderTop: 2,
+            borderColor: "#eeeeee",
+            color: "#424242",
+            display: "flex",
+            justifyContent: "center",
+            fontSize: 25,
+            pt: 2
+          }}>
+          <AiFillEye ></AiFillEye>
+        </Box>
+
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Ver
-        </Button>
-      </CardActions>
-    </Card>
+    </Box>
   );
 };
 export default Tarjetas;

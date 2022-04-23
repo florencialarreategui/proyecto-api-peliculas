@@ -1,6 +1,4 @@
 import Box from "@mui/material/Box";
-import { IBsCameraReelsFill } from "react-icons/bs";
-import Typography from "@mui/material/Typography";
 const Footer = () => {
   return (
     <>

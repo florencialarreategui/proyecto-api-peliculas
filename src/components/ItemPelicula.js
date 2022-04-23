@@ -1,12 +1,21 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { BsFillCaretRightFill } from "react-icons/bs"
+import Avatar from '@mui/material/Avatar';
 const ItemPelicula = ({ titulo, imagen }) => {
   return (
-    <div>
-      <div>
-        <img src={imagen}></img>
-      </div>
-      <h3>{titulo}</h3>
-      <p>icono</p>
-    </div>
+    <Box sx={{
+      display: "flex", p: 3,
+      justifyContent: "space-between",
+      border: 0.5, borderColor: "warning.dark",
+      boxShadow: 2
+    }}>
+      <Avatar alt="Remy Sharp" src={imagen} />
+      <Typography variant="h6">
+        {titulo}
+      </Typography>
+      <BsFillCaretRightFill></BsFillCaretRightFill>
+    </Box>
   );
 };
 

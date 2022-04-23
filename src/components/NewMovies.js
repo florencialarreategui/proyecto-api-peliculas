@@ -2,9 +2,8 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import Tarjetas from "./Tarjetas";
-import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
+
 
 const NewMovies = ({ titulo, imagen }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -18,7 +17,7 @@ const NewMovies = ({ titulo, imagen }) => {
       });
   }, []);
   return (
-    <Container sx={{ bgcolor: "#eeeeee" }}>
+    <Box>
       <Box sx={{ display: "flex", justifyContent: "center", m: 2 }}>
         <Typography variant="h3" gutterBottom component="div">
           Últimos lanzamientos
@@ -29,12 +28,12 @@ const NewMovies = ({ titulo, imagen }) => {
           <Link key={pelicula.id} to={`/movie/${pelicula.id}`}>
             <Tarjetas
               titulo={pelicula.title}
-              imagen={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+              imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
             ></Tarjetas>
           </Link>
         ))}
       </Box>
-    </Container>
+    </Box>
   );
 };
 
