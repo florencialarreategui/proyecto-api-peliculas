@@ -5,7 +5,7 @@ import Tarjetas from "./Tarjetas";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link } from '@mui/material/Link';
 
-
+// si no usas estas props, para que estan?
 const NewMovies = ({ titulo, imagen }) => {
   const [peliculas, setPeliculas] = useState([]);
   useEffect(() => {

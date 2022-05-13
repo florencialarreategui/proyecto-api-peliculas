@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Toolbar from "@mui/material/Toolbar";
 import { Link as LinkRouter } from "react-router-dom";
+// no dejes componentes importados sin usar
 import { Link } from '@mui/material/Link';
 import { MdOutlineMovieFilter } from "react-icons/md";
 import { CardActionArea } from "@mui/material";

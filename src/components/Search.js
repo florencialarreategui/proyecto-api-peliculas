@@ -36,6 +36,7 @@ const Search = () => {
     setSearchParams({
       query: valorDelInput,
     });
+    // no dejes console log en una entrega
     console.log("presionaste la tecla");
   };
   return (
