@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import DetallePelicula from "./components/DetallePelicula";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
+// no deberias tener variables sin usar en tu codigo
 const urlFetch =
   "https://api.themoviedb.org/3/movie/550?api_key=a956e692d7f996ce28c6cca9dfa978ce";
 const App = () => {
