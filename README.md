@@ -2,6 +2,7 @@
 
 Este proyecto fué realizado en el marco de la carrera de Desarrollo Frontend de la escuela de programación ADA it. El mismo aborda el uso de la API de Películas “The Movie Database APi” para el cual diseñe una interfaz capaz de mostrar los resultados y acceder a sus detalles.
 La tecnología principal usada es React.
+Se puede visitar [aquí](https://recomendame-una-peli.vercel.app/)
 
 ## 🎨 **Diseño**:
 
